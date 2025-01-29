@@ -1,0 +1,152 @@
+/* Basic Style Start */
+
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none; 
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Space Grotesk", serif;
+}
+:root{
+    --bg-clr: linear-gradient(135deg, rgba(29,83,20,1) 0%, rgba(19,35,84,1) 33%, rgba(36,121,91,1) 66%, rgba(117,45,87,1) 100%);
+    --btn-clr:rgba(29,83,20,1);
+    --btn-eff:rgb(30,121,91,1);
+}
+
+/* Basic Style End */
+
+
+/* Background Style Start */
+
+.background{
+    background: var(--bg-clr);
+    padding: 10px;
+}
+
+/* Background Style End */
+
+.todo-app h2{
+    margin-bottom: 20px;
+    color: var(--btn-clr);
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    margin: 100px auto 20px;
+    border-radius: 10px;
+    padding: 40px 30px 70px;
+}
+
+.row{
+    display: flex;
+    padding-left: 25px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-radius: 30px;
+    background-color: #f5f5f5;
+}
+.row .btn {
+    background-color: var(--btn-clr);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 30px;
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    transition:0.5s all ease;
+}
+
+.row .btn:hover {
+    background-color: var(--btn-eff);
+    transform: translateX(-5px);
+    color: #fff;
+}
+.row #input-box{
+    flex: 1;
+    background-color: transparent;
+    padding: 10px;
+}
+::placeholder{
+    font-family: "Space Grotesk", serif;
+    font-size: 20px; 
+}
+ul li{
+    cursor: pointer;
+    padding: 12px 8px 12px 25px;
+    font-size: 17px;
+    user-select: none;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    transition: all ease 0.5s;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url(./images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    left: -25px;
+    top: 17px;
+}
+ul li.checked{
+    color: var(--btn-clr);
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(./images/checked.png);
+}
+ul li:hover{
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+ul li .trash{
+    position: absolute;
+    font-size: 20px;
+    right: 0px;
+    color: var(--btn-clr);
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.5s;
+    border-radius: 50%;
+}
+ul li .trash:hover{
+    color: #fff;
+    background-color: var(--btn-clr);
+}
+ul li .edit{
+    position: absolute;
+    font-size: 20px;
+    right: 35px;
+    color: var(--btn-clr);
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.5s;
+    border-radius: 50%;
+}
+ul li .edit:hover{
+    color: #fff;
+    background-color: var(--btn-clr);
+}
